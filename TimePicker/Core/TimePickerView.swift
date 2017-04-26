@@ -42,7 +42,6 @@ class TimePickerView: UIView, UICollectionViewDelegate, UICollectionViewDataSour
     /// - parameter frame: Set the popup size
     /// - parameter everyDayStartTime: Set can select time when earliest everyday
     /// - parameter everyDayEndTime: Set can select time when latest everyday
-    
     func setData(frame: CGRect, everyDayStartTime: Int, everyDayEndTime: Int){
         self.frame = frame
         self.setDefault()
@@ -142,17 +141,6 @@ class TimePickerView: UIView, UICollectionViewDelegate, UICollectionViewDataSour
         cell?.lblDName.text = String(date.day())
         cell?.lblWName.text = date.shortWeekdayToString()
         cell?.isEnable = self.selectedDate[indexPath.row]["isEnable"] as! Bool
-//        cell?.lblDName
-        
-//        if self.timeOptionArr[indexPath.section][indexPath.row]["isSelected"] as! Bool {
-//            cell?.view.borderColor = UIColor(rgba: "#207CF7")
-//            cell?.lblTime.textColor = UIColor(rgba: "#207CF7")
-//        }else{
-//            cell?.view.borderColor = UIColor.lightGray
-//            cell?.lblTime.textColor = UIColor.black
-//        }
-//        
-//        cell?.lblTime.text = self.timeOptionArr[indexPath.section][indexPath.row]["labelText"] as! String
         
         return cell!
     }
@@ -169,50 +157,9 @@ class TimePickerView: UIView, UICollectionViewDelegate, UICollectionViewDataSour
         self.selectedDay = self.selectedDate[indexPath.row]
         self.collectionView.reloadData()
         
-//        if self.timeOptionArr[indexPath.section][indexPath.row]["isSelected"] as! Bool {
-//            self.timeOptionArr[indexPath.section][indexPath.row]["isSelected"] = !(self.timeOptionArr[indexPath.section][indexPath.row]["isSelected"] as! Bool)
-//            self.collectionView.reloadData()
-//            
-//            self.TopView.removeATimeSelected(self.timeOptionArr[indexPath.section][indexPath.row])
-//            self.topViewHeightCons.constant = self.TopView.needHeight
-//            
-//        }else{
-//            
-//            var selectedNum = 0
-//            for i in 0...self.timeOptionArr.count-1{
-//                
-//                for k in 0...self.timeOptionArr[i].count-1{
-//                    guard !(self.timeOptionArr[i][k]["isSelected"] as! Bool) else {
-//                        selectedNum += 1
-//                        continue
-//                    }
-//                }
-//                
-//            }
-//            
-//            if selectedNum >= self.maxSelectedNum{
-//                let alert = UIAlertController(title: "Sorry", message: "You can select option up to \(String(self.maxSelectedNum))", preferredStyle: UIAlertControllerStyle.alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//                let appDelegate = UIApplication.shared.delegate  as! AppDelegate
-//                appDelegate.window!.rootViewController!.present(alert, animated: true, completion: nil)
-//            }else{
-//                self.timeOptionArr[indexPath.section][indexPath.row]["isSelected"] = !(self.timeOptionArr[indexPath.section][indexPath.row]["isSelected"] as! Bool)
-//                self.collectionView.reloadData()
-//                self.TopView.addATimeSelected(self.timeOptionArr[indexPath.section][indexPath.row])
-//                self.topViewHeightCons.constant = self.TopView.needHeight
-//                
-//            }
-//            
-//            
-//        }
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize{
-        
-//        let itemGap : Float = 5.0
-//        let cellWidth = (Float(ScreenSize.SCREEN_WIDTH - 60) - (itemGap * 2))/3
         return  CGSize(width: 60, height: 80)
     }
     
