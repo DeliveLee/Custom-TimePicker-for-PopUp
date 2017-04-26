@@ -28,7 +28,7 @@ class ViewController: UIViewController, TimePickerViewDelegate {
     }
     
     func TimePickerSelectDone(_ time: Date){
-        self.lblTime.text = time.toString(.custom("d/M, H:mm a"), timeZone: .utc)
+        self.lblTime.text = time.toString(.custom("d/M, hh:mm a"), timeZone: .utc)
     }
     
     override func didReceiveMemoryWarning() {
