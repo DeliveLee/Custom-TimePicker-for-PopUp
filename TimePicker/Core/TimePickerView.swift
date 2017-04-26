@@ -1,9 +1,9 @@
 //
 //  TimePickerView.swift
-//  ServisHero
+//  TimePicker
 //
 //  Created by DeliveLee on 2017/4/20.
-//  Copyright © 2017年 ServisHero. All rights reserved.
+//  Copyright © 2017年 TimePicker. All rights reserved.
 //
 
 import UIKit
