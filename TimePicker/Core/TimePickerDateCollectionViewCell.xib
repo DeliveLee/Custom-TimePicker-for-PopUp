@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TimePickerDateCollectionViewCell" id="gTV-IL-0wX" customClass="TimePickerDateCollectionViewCell" customModule="TimePicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twu-VM-R5J">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzZ-jS-hla">
+                                <rect key="frame" x="0.0" y="10" width="60" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="srK-6O-nYP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4m-Rf-Mn6">
+                                <rect key="frame" x="0.0" y="24.5" width="60" height="55.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qzZ-jS-hla" secondAttribute="trailing" id="0nh-ME-Y1E"/>
+                            <constraint firstAttribute="trailing" secondItem="s4m-Rf-Mn6" secondAttribute="trailing" id="68b-F9-Irc"/>
+                            <constraint firstItem="qzZ-jS-hla" firstAttribute="leading" secondItem="Twu-VM-R5J" secondAttribute="leading" id="FMU-og-ybW"/>
+                            <constraint firstItem="qzZ-jS-hla" firstAttribute="top" secondItem="Twu-VM-R5J" secondAttribute="top" constant="10" id="Tgl-G4-pS3"/>
+                            <constraint firstItem="s4m-Rf-Mn6" firstAttribute="leading" secondItem="Twu-VM-R5J" secondAttribute="leading" id="dvE-7H-weR"/>
+                            <constraint firstAttribute="bottom" secondItem="s4m-Rf-Mn6" secondAttribute="bottom" id="mSd-bI-Ffh"/>
+                            <constraint firstItem="s4m-Rf-Mn6" firstAttribute="top" secondItem="qzZ-jS-hla" secondAttribute="bottom" id="oK4-g0-lcT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Twu-VM-R5J" secondAttribute="trailing" id="Ko2-dl-iEz"/>
+                <constraint firstAttribute="bottom" secondItem="Twu-VM-R5J" secondAttribute="bottom" id="Sfp-a2-Ql0"/>
+                <constraint firstItem="Twu-VM-R5J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kJh-PQ-WNZ"/>
+                <constraint firstItem="Twu-VM-R5J" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yVq-6W-UMG"/>
+            </constraints>
+            <size key="customSize" width="60" height="83"/>
+            <connections>
+                <outlet property="bgView" destination="Twu-VM-R5J" id="LIT-KU-Jq9"/>
+                <outlet property="lblDName" destination="s4m-Rf-Mn6" id="hFY-7X-oBM"/>
+                <outlet property="lblWName" destination="qzZ-jS-hla" id="rFH-qs-XRg"/>
+            </connections>
+            <point key="canvasLocation" x="30" y="78.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
